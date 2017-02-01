@@ -1,6 +1,13 @@
 target/
 .settings/
+<<<<<<< Upstream, based on sample-merchant-app
 .recommenders/
 .metadata/
 .project
 .classpath
+=======
+.metadata/
+.recommenders/
+.classpath
+.project
+>>>>>>> bb9954e Initial coherence poc setup
