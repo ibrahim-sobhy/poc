@@ -1,0 +1,8 @@
+language: java
+
+before_install:
+  - echo "Testing First Travis CI"
+
+
+after_success:
+  - echo "Test Success"
