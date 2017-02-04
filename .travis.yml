@@ -1,4 +1,6 @@
 language: java
+sudo: false
+script: mvn clean install
 
 before_install:
   - echo "Testing First Travis CI"
