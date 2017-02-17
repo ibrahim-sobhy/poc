@@ -1,25 +1,22 @@
 package com.ibrahim.loyalty;
 
-import static org.mockito.Mockito.when;
-import static org.mockito.Mockito.verify;
-import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import com.ibrahim.loyalty.repository.UserDao;
-import com.ibrahim.loyalty.service.UserService;
 import com.ibrahim.loyalty.service.UserServiceImpl;
 import com.ibrahim.loyalty.user.User;
 
 @RunWith(MockitoJUnitRunner.class)
-public class UserServiceApplicationTests {
+public class UserServiceApplicationTest {
 	
 	@Mock
 	private UserDao userDao;
@@ -38,7 +35,7 @@ public class UserServiceApplicationTests {
 		//Mockito Expectaions
 		when(userDao.findById(userId)).thenReturn(userToGet);
 		
-		//Execure the method being tested
+		//Execute the method being tested
 		User actualUser = userService.getUser(userId);
 		
 		//Validations
@@ -49,7 +46,4 @@ public class UserServiceApplicationTests {
 		//Verifications
 		verify(userDao).findById(userId);
 	}
-	
-	
-
 }
