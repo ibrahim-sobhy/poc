@@ -23,7 +23,6 @@ pipeline {
     stage('Frontend ') {
       steps {
         sh 'echo Frontend'
-        input(message: 'Deploy to QA?', id: 'depQA', ok: 'approveToQA', submitter: 'QA', submitterParameter: 'QAParam')
       }
     }
     stage('Static Analysis') {
